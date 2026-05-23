@@ -8,14 +8,14 @@
 <body>
     <main class="container">
         <section class="main-panel">
-            <form class="add-item-row" onsubmit="return false;">
-                <input type="text" placeholder="Назва товару" class="add-input" required>
+            <form class="add-item-row" id="add-form" onsubmit="return false;">
+                <input type="text" id="item-input" placeholder="Назва товару" class="add-input" required>
                 <button type="submit" class="btn btn-blue" data-tooltip="Додати новий товар до списку">Додати</button>
             </form>
             
             <hr class="divider">
 
-            <ul class="item-list">
+            <ul class="item-list" id="items-container">
                 <li class="item">
                     <span class="item-name crossed">Помідори</span>
                     <div class="item-controls center-controls">
@@ -62,7 +62,7 @@
             <section class="summary-section">
                 <h2>Залишилося</h2>
                 <hr class="divider">
-                <div class="tag-list">
+                <div class="tag-list" id="left-to-buy-container">
                     <span class="product-item">Печиво <span class="amount">2</span></span>
                     <span class="product-item">Сир <span class="amount">1</span></span>
                 </div>
@@ -71,7 +71,7 @@
             <section class="summary-section">
                 <h2>Куплено</h2>
                 <hr class="divider">
-                <div class="tag-list">
+                <div class="tag-list" id="bought-container">
                     <span class="product-item crossed-tag">Помідори <span class="amount">2</span></span>
                 </div>
             </section>
@@ -82,5 +82,7 @@
         <span class="badge-title">BuyList</span>
         <span class="badge-name">Гриценко Богдан Олександрович</span>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
